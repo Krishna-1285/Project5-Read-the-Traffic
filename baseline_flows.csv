@@ -1,0 +1,17 @@
+ts,src_ip,dst_ip,dst_port,proto,bytes_out,bytes_in,note
+2026-06-15T02:00:11Z,10.20.4.31,10.20.4.10,53,udp,84,210,dns-internal-resolver
+2026-06-15T02:00:12Z,10.20.4.31,10.20.4.10,123,udp,76,76,ntp-sync
+2026-06-15T02:00:30Z,10.20.4.31,140.82.112.3,443,tcp,5120,184320,git-pull-business-hours-ok
+2026-06-15T02:01:05Z,10.20.4.45,10.20.4.20,443,tcp,2048,40960,reverse-proxy-app
+2026-06-15T02:01:40Z,10.20.4.45,10.20.4.20,5432,tcp,1500,9800,postgres-pgvector
+2026-06-15T02:02:00Z,10.20.4.62,10.20.4.50,8080,tcp,900,4200,vllm-inference-internal
+2026-06-15T02:02:00Z,10.20.4.62,10.20.4.51,8080,tcp,910,4180,vllm-inference-internal
+2026-06-15T02:03:15Z,10.20.4.31,151.101.0.223,443,tcp,3300,220500,pkg-mirror-update
+2026-06-15T02:04:00Z,10.20.4.45,10.20.4.10,53,udp,88,196,dns-internal-resolver
+2026-06-15T02:05:22Z,10.20.4.77,10.20.4.20,443,tcp,1700,33800,reverse-proxy-app
+# --- baseline statistics distilled from 30 days of NetFlow, per host, per hour ---
+# host 10.20.4.31  mean_out=6.0KB  p95_out=9.1KB  distinct_dst=5   dns:53,ntp:123,git:443
+# host 10.20.4.45  mean_out=2.1KB  p95_out=3.0KB  distinct_dst=3   proxy:443,pg:5432,dns:53
+# host 10.20.4.62  mean_out=0.9KB  p95_out=1.4KB  distinct_dst=2   vllm:8080 (10.20.4.50, .51)
+# host 10.20.4.77  mean_out=1.7KB  p95_out=2.4KB  distinct_dst=1   proxy:443
+# NOTE: no host in baseline ever talks to a public IP on a high ephemeral port at a fixed interval.

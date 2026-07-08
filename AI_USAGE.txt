@@ -1,0 +1,30 @@
+Project 5 – Read the Traffic
+Student: Gokul Krishna
+
+Artificial intelligence was used as a writing and documentation assistant during this project.
+
+Tasks Assisted by AI
+--------------------
+• Helped improve Python code readability and organization.
+• Assisted in formatting REPORT.docx.
+• Assisted in formatting MEMO.docx.
+• Helped improve grammar, spelling, and sentence structure.
+• Helped organize the README file.
+
+Tasks Completed and Verified by Me
+----------------------------------
+• Reviewed the assignment requirements and grading rubric.
+• Verified that the detector builds a per-host behavioral baseline.
+• Verified the detector identifies the three required anomaly classes:
+    - Beaconing
+    - Port Scan / Lateral Movement
+    - Data Ex-filtration
+• Verified the explanation for every detection.
+• Reviewed all recommendations before submission.
+• Verified the final conclusions contained in REPORT.docx and MEMO.docx.
+
+I understand that I am responsible for every statement, recommendation, and conclusion contained in this submission.
+
+Signed,
+
+Gokul Krishna
